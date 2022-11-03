@@ -17,9 +17,11 @@ def main():
     async def on_ready():
         print("Rocketry Bot is Online")
 
-    for folder in os.listdir("Test-Bot/modules"):
+    for folder in os.listdir("modules"):
         if os.path.exists(os.path.join("modules", folder, "cog.py")):
             bot.load_extension(f"modules.{folder}.cog")
+        
+        
 
     bot.run(TOKEN)
 
