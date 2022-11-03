@@ -20,6 +20,8 @@ def main():
     for folder in os.listdir("modules"):
         if os.path.exists(os.path.join("modules", folder, "cog.py")):
             bot.load_extension(f"modules.{folder}.cog")
+        
+        
 
     bot.run(TOKEN)
 
